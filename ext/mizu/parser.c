@@ -100,6 +100,10 @@ VALUE method_mizu_parser_parse(VALUE self, VALUE data)
   Data_Get_Struct(self, ParserWrapper, wrapper);
   char *buffer = StringValueCStr(data);
   ssize_t rret = strlen(buffer);
+  if (wrapper->_buflen + rret >= sizeof(wrapper->_buf))
+  {
+    rb_raise(HeadersTooLongError, "Request Headers Too Long");
+  }
   memcpy(wrapper->_buf + wrapper->_buflen, buffer, rret);
   wrapper->_prevbuflen = wrapper->_buflen;
   wrapper->_buflen += rret;

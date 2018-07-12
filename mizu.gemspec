@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors                  = ['HeckPsi Lab']
   s.email                    = ['business@heckpsi.com']
   s.require_paths            = ['lib']
-  s.files                    = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec|.resources)/}) } \
-    - %w(README.md CODE_OF_CONDUCT.md CONTRIBUTING.md Gemfile Rakefile mizu.gemspec .gitignore .rspec .codeclimate.yml .rubocop.yml .travis.yml logo.png Rakefile Gemfile)
+  s.files                    = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|.resources)/}) } \
+    - %w(README.md CODE_OF_CONDUCT.md CONTRIBUTING.md Gemfile Rakefile mizu.gemspec .gitignore .codeclimate.yml .rubocop.yml .travis.yml logo.png Rakefile Gemfile)
   # s.extensions               = ['ext/mizu/extconf.rb']
   s.homepage                 = 'https://github.com/midori-rb/mizu'
   s.metadata                 = { 'issue_tracker' => 'https://github.com/midori-rb/mizu/issues' }
