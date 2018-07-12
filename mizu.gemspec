@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name                     = 'mizu'
-  s.version                  = '0.0.1'
+  s.version                  = '0.1.0'
   s.required_ruby_version    = '>=2.3.6'
   s.platform                 = Gem::Platform::RUBY
   s.date                     = Time.now.strftime('%Y-%m-%d')
