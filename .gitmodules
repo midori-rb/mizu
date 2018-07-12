@@ -1,0 +1,3 @@
+[submodule "ext/mizu/picohttpparser"]
+	path = ext/mizu/picohttpparser
+	url = git@github.com:h2o/picohttpparser.git
