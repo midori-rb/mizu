@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name                     = 'mizu'
-  s.version                  = '0.1.0'
+  s.version                  = '0.1.2'
   s.required_ruby_version    = '>=2.3.6'
   s.platform                 = Gem::Platform::RUBY
   s.date                     = Time.now.strftime('%Y-%m-%d')
@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.authors                  = ['HeckPsi Lab']
   s.email                    = ['business@heckpsi.com']
   s.require_paths            = ['lib']
-  s.files                    = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|.resources)/}) } \
+  s.files                    = `git ls-files -z --recurse-submodules`.split("\x0").reject { |f| f.match(%r{^(test|.resources)/}) } \
     - %w(README.md CODE_OF_CONDUCT.md CONTRIBUTING.md Gemfile Rakefile mizu.gemspec .gitignore .codeclimate.yml .rubocop.yml .travis.yml logo.png Rakefile Gemfile)
-  # s.extensions               = ['ext/mizu/extconf.rb']
+  s.extensions               = ['ext/mizu/extconf.rb']
   s.homepage                 = 'https://github.com/midori-rb/mizu'
   s.metadata                 = { 'issue_tracker' => 'https://github.com/midori-rb/mizu/issues' }
   s.license                  = 'MIT'
