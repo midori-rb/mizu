@@ -59,4 +59,11 @@ class TestParser < MiniTest::Test
       @parser << str
     end
   end
+
+  def test_that_it_would_raise_error_when_request_too_long
+    str = "GET /#{'w' * 2 ** 12}"
+    assert_raises Mizu::Exceptions::HeadersTooLongError do
+      @parser << str
+    end
+  end
 end
