@@ -1,5 +1,12 @@
+begin
+  require 'bundler/setup'
+rescue LoadError
+  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
+end
+
 require 'rake/extensiontask'
 require 'rake/testtask'
+require File.join('bundler', 'gem_tasks')
 
 task default: %i(spec)
 
